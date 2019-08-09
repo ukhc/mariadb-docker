@@ -66,8 +66,13 @@ spec:
               name: mariadb-root-secret
               key: password
         livenessProbe:
-          tcpSocket:
-            port: 3306
+          exec:
+            command:
+              - /bin/sh
+              - -c
+              - mysqladmin
+              - ping
+              - --silent
           initialDelaySeconds: 120
           periodSeconds: 10
           timeoutSeconds: 5 
