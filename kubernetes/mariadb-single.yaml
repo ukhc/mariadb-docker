@@ -68,8 +68,6 @@ spec:
         livenessProbe:
           exec:
             command:
-              - /bin/sh
-              - -c
               - mysqladmin
               - ping
               - --silent
