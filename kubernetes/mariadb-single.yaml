@@ -70,7 +70,8 @@ spec:
             command:
               - mysqladmin
               - ping
-              - --silent
+              - >
+              - /dev/null
           initialDelaySeconds: 120
           periodSeconds: 10
           timeoutSeconds: 5 
