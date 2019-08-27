@@ -109,6 +109,6 @@ spec:
       - name: mariadb-persistent-storage
         persistentVolumeClaim:
           claimName: mariadb-pv-claim
-      - name: mariadb-dbscripts
+      - name: mariadb-initdb-scripts
         configMap:
           name: mariadb-initdb-scripts
