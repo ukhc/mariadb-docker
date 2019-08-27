@@ -15,6 +15,16 @@ spec:
 ---
 
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mariadb-initdb-scripts
+data:
+  init.sql: |
+    select 1=1
+
+---
+
+apiVersion: v1
 kind: Secret
 metadata:
   name: mariadb-root-secret
@@ -93,7 +103,12 @@ spec:
         volumeMounts:
         - name: mariadb-persistent-storage
           mountPath: /var/lib/mysql
+        - name: mariadb-initdb-scripts
+          mountPath: /docker-entrypoint-initdb.d
       volumes:
       - name: mariadb-persistent-storage
         persistentVolumeClaim:
           claimName: mariadb-pv-claim
+      - name: mariadb-dbscripts
+        configMap:
+          name: mariadb-initdb-scripts
