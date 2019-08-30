@@ -36,7 +36,7 @@ metadata:
   name: mariadb-initdb-scripts
 data:
   init.sql: |
-    select 1=1
+    select 1
 
 ---
 
