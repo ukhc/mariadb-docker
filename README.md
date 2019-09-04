@@ -28,18 +28,14 @@ docker container rm mariadb
 
 Deploy (run these commands from the root folder of this repo)
 ~~~
-mkdir -p /Users/Shared/Kubernetes/persistent-volumes/mariadb
-kubectl apply -f ./kubernetes/mariadb-single-local-pv.yaml
-kubectl apply -f ./kubernetes/mariadb-single.yaml
+./local-apply.sh
 ~~~
 
 Note: The default mysql root password is admin
 
 Delete
 ~~~
-kubectl delete -f ./kubernetes/mariadb-single.yaml
-kubectl delete -f ./kubernetes/mariadb-single-local-pv.yaml
-rm -rf /Users/Shared/Kubernetes/persistent-volumes/mariadb
+./local-delete.sh
 ~~~
 
 ## How to override values in the Kubernetes deployment
