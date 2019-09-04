@@ -27,7 +27,7 @@ fi
 ##########################
 
 echo "setup the persistent volume for mariadb...."
-mkdir -p /Users/Shared/Kubernetes/persistent-volumes/mariadb
+mkdir -p /Users/Shared/Kubernetes/persistent-volumes/default/mariadb
 kubectl apply -f ./kubernetes/mariadb-single-local-pv.yaml
 
 ##########################
