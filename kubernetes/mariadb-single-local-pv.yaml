@@ -34,4 +34,4 @@ spec:
     - ReadWriteOnce
   storageClassName: mariadb-storage
   hostPath:
-    path: "/Users/Shared/Kubernetes/persistent-volumes/mariadb"
+    path: "/Users/Shared/Kubernetes/persistent-volumes/default/mariadb"

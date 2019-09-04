@@ -33,7 +33,7 @@ kubectl delete -f ./kubernetes/mariadb-single.yaml
 
 echo "delete the persistent volume for mariadb...."
 kubectl delete -f ./kubernetes/mariadb-single-local-pv.yaml
-rm -rf /Users/Shared/Kubernetes/persistent-volumes/mariadb
+rm -rf /Users/Shared/Kubernetes/persistent-volumes/default/mariadb
 
 ##########################
 
