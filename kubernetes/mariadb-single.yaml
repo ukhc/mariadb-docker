@@ -21,7 +21,7 @@ metadata:
   labels:
     app: mariadb
 spec:
-  storageClassName: mariadb-storage
+  storageClassName: mariadb-storage-class
   accessModes:
     - ReadWriteOnce
   resources:
