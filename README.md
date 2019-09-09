@@ -26,16 +26,36 @@ docker container rm mariadb
 1. In Docker Desktop > Preferences > Kubernetes, check 'Enable Kubernetes'
 1. Click on the Docker item in the Menu Bar. Mouse to the 'Kubernetes' menu item and ensure that 'docker-for-desktop' is selected.
 
-Deploy (run these commands from the root folder of this repo)
+### Deploy (run these commands from the root folder of this repo)
 ~~~
 ./local-apply.sh
 ~~~
 
 Note: The default mysql root password is admin
 
-Delete
+### Delete
 ~~~
 ./local-delete.sh
+~~~
+
+### Create a backup of the persistent volume
+~~~
+./local-backup.sh
+~~~
+
+### Restore from backup (pass it the backup folder name)
+~~~
+./local-restore.sh 2019-10-31_20-05-55
+~~~
+
+### Restart the deployment
+~~~
+./local-restart.sh
+~~~
+
+### Scale the deployment
+~~~
+kubectl scale --replicas=4 deployment/mariadb
 ~~~
 
 ## How to override values in the Kubernetes deployment
