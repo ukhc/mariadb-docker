@@ -1,4 +1,4 @@
-# MariaDB for Docker
+# MariaDB for Docker and Kubernetes
 
 ## Reference
 - https://hub.docker.com/_/mariadb
