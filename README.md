@@ -92,7 +92,7 @@ echo -n admin | base64
 
 sed -i '' 's/password:.*/password: Base64EncodedPassword/' yaml.tmp
 
-# don't forget to modify the readiness probe with the new password
+# don't forget to modify the liveness and readiness probes with the new password
 sed -i '' 's/-padmin/-pYOURNEWPASSWORD/' yaml.tmp
 
 # base64 decode the password, if you need to see what it is
