@@ -34,7 +34,7 @@ echo "$BACKUP_FOLDER"
 POD=$(kubectl get pod -l app=mariadb -o jsonpath="{.items[0].metadata.name}")
 
 echo "backup /var/lib/mysql folder..."
-mkdir -p ./backup/$BACKUP_FOLDER/html
-kubectl cp $POD:/var/lib/mysql ./backup/$BACKUP_FOLDER
+mkdir -p ./backup/$BACKUP_FOLDER/mysql
+kubectl cp $POD:/var/lib/mysql ./backup/$BACKUP_FOLDER/mysql
 
 echo "...done"

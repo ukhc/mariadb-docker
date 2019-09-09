@@ -58,9 +58,9 @@ fi
 
 POD=$(kubectl get pod -l app=mariadb -o jsonpath="{.items[0].metadata.name}")
 
-echo "restore html..."
+echo "restore mysql..."
 kubectl exec $POD -- bash -c "rm -rf /var/lib/mysql/*"
-kubectl cp ./backup/$BACKUP_FOLDER $POD:/var/lib/mysql
+kubectl cp ./backup/$BACKUP_FOLDER/mysql $POD:/var/lib
 
 ##########################
 
