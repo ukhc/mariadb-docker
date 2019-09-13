@@ -58,6 +58,17 @@ Note: The default mysql root password is admin
 kubectl scale --replicas=4 deployment/mariadb
 ~~~
 
+### Shell into the container
+~~~
+./local-shell-mariadb.sh
+~~~
+
+### Get the logs from the container
+~~~
+./local-logs-mariadb.sh
+~~~
+
+
 ## How to override values in the Kubernetes deployment
 
 Use this pattern in a script
